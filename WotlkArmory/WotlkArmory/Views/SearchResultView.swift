@@ -14,24 +14,38 @@ struct SearchResultView: View {
     @ObservedObject var viewModel = ViewModel()
     
     struct Constants {
-        static let characterCardHeightScale: CGFloat = 0.2
+        static let characterCardHeightScale: CGFloat = 0.11
+        static let characterCardPadding: CGFloat = 5
+        static let progressViewScaleEffect: CGFloat = 1.5
     }
     
     var body: some View {
-        NavigationView {
+        if(viewModel.isFetching) {
+            VStack {
+                Spacer()
+                ProgressView()
+                    .scaleEffect(Constants.progressViewScaleEffect)
+                Spacer()
+            }
+        }
+        else {
             GeometryReader { geometry in
-                List {
-                    ForEach(viewModel.characters, id: \.self) { character in
-                        CharacterCardView(character: character)
-                            .listRowSeparator(.hidden)
-                            .frame(height: geometry.size.height * Constants.characterCardHeightScale)
+                NavigationView {
+                    List {
+                        ForEach(viewModel.characters, id: \.self) { character in
+                            CharacterCardView(character: character)
+                                .listRowSeparator(.hidden)
+                                .frame(height: geometry.size.height * Constants.characterCardHeightScale)
+                                .listRowInsets(.init())
+                                .padding(Constants.characterCardPadding)
+                        }
+                    }
+                    .listStyle(.plain)
+                    .onAppear {
+                        viewModel.fetchCharacters(searchString: searchString)
                     }
                 }
-                .listStyle(.plain)
-                .navigationTitle("Characters")
-                .onAppear {
-                    viewModel.fetchCharacters(searchString: searchString)
-                }
+                .navigationBarTitle("", displayMode: .inline)
             }
         }
     }

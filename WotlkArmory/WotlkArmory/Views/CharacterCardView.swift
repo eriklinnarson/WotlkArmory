@@ -16,9 +16,11 @@ struct CharacterCardView: View {
     }
     
     struct Constants {
-        static let cornerRadius: CGFloat = 5
-        static let lineWidth: CGFloat = 5
-        static let factionIconScale: CGFloat = 0.5
+        static let cornerRadius: CGFloat = 7
+        static let lineWidth: CGFloat = 3
+        static let factionIconScale: CGFloat = 0.8
+        static let factionIconOpacity: CGFloat = 0.5
+        static let padding: CGFloat = 10
     }
     
     var body: some View {
@@ -30,19 +32,28 @@ struct CharacterCardView: View {
                 RoundedRectangle(cornerRadius: Constants.cornerRadius)
                     .strokeBorder(lineWidth: Constants.lineWidth)
                 
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("\(character.name), \(character.server)")
+                HStack {
+                    Image(character.clas) // The name of the images in assets correspond to the names found in the API-response
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: geometry.size.height * Constants.factionIconScale)
+                        .opacity(Constants.factionIconOpacity)
+                    Spacer()
+                    VStack(alignment: .center) {
+                        Text("\(character.name) - \(character.server)")
                             .font(.largeTitle)
-                        Spacer()
-                        Image(character.faction) // The name of the images in assets correspond to the names found in the API-response
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: geometry.size.height * Constants.factionIconScale)
+                            .minimumScaleFactor(0.5)
+                            .lineLimit(1)
+                        Text("Itemlevel \(String(character.gearscore))")
                     }
-                    Text("\(character.clas), ItemLevel \(String(character.gearscore))")
+                    Spacer()
+                    Image(character.faction) // The name of the images in assets correspond to the names found in the API-response
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: geometry.size.height * Constants.factionIconScale)
+                        .opacity(Constants.factionIconOpacity)
                 }
-                .padding()
+                .padding(Constants.padding)
                 
             }
             .frame(width: geometry.size.width)

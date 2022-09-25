@@ -21,6 +21,8 @@ struct SearchView: View {
                     }
                 }
             }
+            .navigationTitle("Search")
+            .navigationBarHidden(true)
         }
     }
 }

@@ -12,15 +12,30 @@ class ViewModel: ObservableObject {
     @Published private var model: Model
     var characters: [Character] { model.characters }
     
+    @Published var isFetching: Bool = false
+    
     init() {
         self.model = Model()
     }
     
     func fetchCharacters(searchString: String) {
-        guard let url = URL(string: "https://ironforge.pro/api/players?search=" + searchString) else { return }
+        
+        DispatchQueue.main.async {
+            self.isFetching = true
+        }
+        
+        guard let url = URL(string: "https://ironforge.pro/api/players?search=" + searchString) else {
+            DispatchQueue.main.async {
+                self.isFetching = false
+            }
+            return
+        }
         
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             guard let data = data, error == nil else {
+                DispatchQueue.main.async {
+                    self?.isFetching = false
+                }
                 return
             }
             
@@ -28,6 +43,7 @@ class ViewModel: ObservableObject {
                 let characters = try JSONDecoder().decode([Character].self, from: data)
                 DispatchQueue.main.async {
                     self?.model.characters = characters
+                    self?.isFetching = false
                 }
             }
             catch {
