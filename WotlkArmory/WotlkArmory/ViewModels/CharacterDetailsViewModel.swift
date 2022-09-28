@@ -16,6 +16,8 @@ class CharacterDetailsViewModel: ObservableObject {
     
     var characterName: String { characterData?.info.name ?? "Name not available" }
     var characterServer: String { characterData?.info.server ?? "Server not available" }
+    var characterFaction: String { characterData?.info.faction ?? "Unavailable" }
+    var characterClass: String { characterData?.info.clas ?? "Unavailable" }
     
     var defaultItem: Item = Item(id: 0, gs: 0, rarity: "", name: "No item")
     var Head: Item { characterData?.g.all.Head[0] ?? defaultItem }
