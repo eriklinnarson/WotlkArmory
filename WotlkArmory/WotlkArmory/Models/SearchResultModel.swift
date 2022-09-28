@@ -8,7 +8,7 @@
 import Foundation
 
 struct SearchResultModel {
-    var characters: [Character]
+    var characters: [CharacterShortInfo]
     
     init() {
         self.characters = []

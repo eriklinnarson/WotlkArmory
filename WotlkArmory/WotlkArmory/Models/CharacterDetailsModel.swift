@@ -9,5 +9,5 @@ import Foundation
 
 struct CharacterDetailsModel {
     
-    var characterDetails: CharacterDetails?
+    var characterData: CharacterData?
 }

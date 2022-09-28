@@ -9,9 +9,9 @@ import SwiftUI
 
 struct CharacterCardView: View {
     
-    private var character: Character
+    private var character: CharacterShortInfo
     
-    init(character: Character) {
+    init(character: CharacterShortInfo) {
         self.character = character
     }
     
@@ -62,7 +62,7 @@ struct CharacterCardView: View {
 
 struct CharacterSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        let character = Character(name: "Toteman", server: "Jindo", faction: "Alliance", clas: "Shaman", gearscore: 123)
+        let character = CharacterShortInfo(name: "Toteman", server: "Jindo", faction: "Alliance", clas: "Shaman", gearscore: 123)
         CharacterCardView(character: character)
             .frame(height: 200)
     }
