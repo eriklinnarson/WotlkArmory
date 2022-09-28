@@ -29,30 +29,28 @@ struct SearchResultView: View {
         }
         else {
             GeometryReader { geometry in
-                NavigationView {
-                    List {
-                        ForEach(viewModel.characters, id: \.self) { character in
-                            ZStack {
-                                CharacterCardView(character: character)
-                                NavigationLink(destination: CharacterDetailsView(characterName: character.name, characterServer: character.server)) {
-                                    EmptyView()
-                                }
-                                .frame(width: 0)
-                                .opacity(0)
-                                .padding(0)
+                List {
+                    ForEach(viewModel.characters, id: \.self) { character in
+                        ZStack {
+                            CharacterCardView(character: character)
+                            NavigationLink(destination: CharacterDetailsView(characterName: character.name, characterServer: character.server)) {
+                                EmptyView()
                             }
-                            .listRowSeparator(.hidden)
-                            .frame(height: geometry.size.height * Constants.characterCardHeightScale)
-                            .listRowInsets(.init())
-                            .padding(Constants.characterCardPadding)
+                            .frame(width: 0)
+                            .opacity(0)
+                            .padding(0)
                         }
-                    }
-                    .listStyle(.plain)
-                    .onAppear {
-                        viewModel.fetchCharacters(searchString: searchString)
+                        .listRowSeparator(.hidden)
+                        .frame(height: geometry.size.height * Constants.characterCardHeightScale)
+                        .listRowInsets(.init())
+                        .padding(Constants.characterCardPadding)
                     }
                 }
+                .listStyle(.plain)
                 .navigationBarTitle("", displayMode: .inline)
+                .onAppear {
+                    viewModel.fetchCharacters(searchString: searchString)
+                }
             }
         }
     }

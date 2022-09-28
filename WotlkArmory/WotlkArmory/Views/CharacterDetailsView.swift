@@ -27,12 +27,10 @@ struct CharacterDetailsView: View {
             }
         }
         else {
-            NavigationView {
-                Text(viewModel.character?.name ?? "Unavailable")
+            Text(viewModel.character?.name ?? "Unavailable")
                 .onAppear {
                     viewModel.fetchCharacterDetailed(characterName: characterName, characterServer: characterServer)
                 }
-            }
         }
     }
 }
