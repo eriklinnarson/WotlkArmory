@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-class ViewModel: ObservableObject {
+class SearchResultViewModel: ObservableObject {
     
-    @Published private var model: Model
+    @Published private var model: SearchResultModel
     var characters: [Character] { model.characters }
     
     @Published var isFetching: Bool = false
     
     init() {
-        self.model = Model()
+        self.model = SearchResultModel()
     }
     
     func fetchCharacters(searchString: String) {

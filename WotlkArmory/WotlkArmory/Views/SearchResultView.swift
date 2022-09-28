@@ -10,8 +10,7 @@ import SwiftUI
 struct SearchResultView: View {
     
     var searchString: String
-    
-    @ObservedObject var viewModel = ViewModel()
+    @StateObject var viewModel = SearchResultViewModel()
     
     struct Constants {
         static let characterCardHeightScale: CGFloat = 0.11
@@ -33,11 +32,19 @@ struct SearchResultView: View {
                 NavigationView {
                     List {
                         ForEach(viewModel.characters, id: \.self) { character in
-                            CharacterCardView(character: character)
-                                .listRowSeparator(.hidden)
-                                .frame(height: geometry.size.height * Constants.characterCardHeightScale)
-                                .listRowInsets(.init())
-                                .padding(Constants.characterCardPadding)
+                            ZStack {
+                                CharacterCardView(character: character)
+                                NavigationLink(destination: CharacterDetailsView(characterName: character.name, characterServer: character.server)) {
+                                    EmptyView()
+                                }
+                                .frame(width: 0)
+                                .opacity(0)
+                                .padding(0)
+                            }
+                            .listRowSeparator(.hidden)
+                            .frame(height: geometry.size.height * Constants.characterCardHeightScale)
+                            .listRowInsets(.init())
+                            .padding(Constants.characterCardPadding)
                         }
                     }
                     .listStyle(.plain)

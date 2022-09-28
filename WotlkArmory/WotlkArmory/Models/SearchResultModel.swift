@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Model {
+struct SearchResultModel {
     var characters: [Character]
     
     init() {

@@ -7,26 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		035D6DA028E20E4400277C4F /* CharacterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035D6D9F28E20E4400277C4F /* CharacterDetailsView.swift */; };
+		035D6DA628E44D4B00277C4F /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035D6DA528E44D4B00277C4F /* CharacterDetailsViewModel.swift */; };
+		035D6DA828E44DFF00277C4F /* CharacterDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035D6DA728E44DFF00277C4F /* CharacterDetailsModel.swift */; };
 		03F44A7D28E0CA96009DE9C1 /* WotlkArmoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44A7C28E0CA96009DE9C1 /* WotlkArmoryApp.swift */; };
 		03F44A7F28E0CA96009DE9C1 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44A7E28E0CA96009DE9C1 /* SearchResultView.swift */; };
 		03F44A8128E0CA96009DE9C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F44A8028E0CA96009DE9C1 /* Assets.xcassets */; };
 		03F44A8428E0CA96009DE9C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F44A8328E0CA96009DE9C1 /* Preview Assets.xcassets */; };
-		03F44A8E28E0CCD3009DE9C1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44A8D28E0CCD3009DE9C1 /* ViewModel.swift */; };
-		03F44A9028E0CD91009DE9C1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44A8F28E0CD91009DE9C1 /* Model.swift */; };
-		03F44A9228E0CF8B009DE9C1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44A9128E0CF8B009DE9C1 /* Character.swift */; };
+		03F44A8E28E0CCD3009DE9C1 /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44A8D28E0CCD3009DE9C1 /* SearchResultViewModel.swift */; };
+		03F44A9028E0CD91009DE9C1 /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44A8F28E0CD91009DE9C1 /* SearchResultModel.swift */; };
+		03F44A9228E0CF8B009DE9C1 /* JSONModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44A9128E0CF8B009DE9C1 /* JSONModels.swift */; };
 		03F44A9428E0D873009DE9C1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44A9328E0D873009DE9C1 /* SearchView.swift */; };
 		03F44A9628E0DC4A009DE9C1 /* CharacterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44A9528E0DC4A009DE9C1 /* CharacterCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		035D6D9F28E20E4400277C4F /* CharacterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsView.swift; sourceTree = "<group>"; };
+		035D6DA528E44D4B00277C4F /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
+		035D6DA728E44DFF00277C4F /* CharacterDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsModel.swift; sourceTree = "<group>"; };
 		03F44A7928E0CA96009DE9C1 /* WotlkArmory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WotlkArmory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F44A7C28E0CA96009DE9C1 /* WotlkArmoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotlkArmoryApp.swift; sourceTree = "<group>"; };
 		03F44A7E28E0CA96009DE9C1 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		03F44A8028E0CA96009DE9C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03F44A8328E0CA96009DE9C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		03F44A8D28E0CCD3009DE9C1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		03F44A8F28E0CD91009DE9C1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		03F44A9128E0CF8B009DE9C1 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		03F44A8D28E0CCD3009DE9C1 /* SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
+		03F44A8F28E0CD91009DE9C1 /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
+		03F44A9128E0CF8B009DE9C1 /* JSONModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONModels.swift; sourceTree = "<group>"; };
 		03F44A9328E0D873009DE9C1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		03F44A9528E0DC4A009DE9C1 /* CharacterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,8 +88,9 @@
 		03F44A8A28E0CBCF009DE9C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				03F44A8F28E0CD91009DE9C1 /* Model.swift */,
-				03F44A9128E0CF8B009DE9C1 /* Character.swift */,
+				03F44A8F28E0CD91009DE9C1 /* SearchResultModel.swift */,
+				03F44A9128E0CF8B009DE9C1 /* JSONModels.swift */,
+				035D6DA728E44DFF00277C4F /* CharacterDetailsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,7 +98,8 @@
 		03F44A8B28E0CBDA009DE9C1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				03F44A8D28E0CCD3009DE9C1 /* ViewModel.swift */,
+				03F44A8D28E0CCD3009DE9C1 /* SearchResultViewModel.swift */,
+				035D6DA528E44D4B00277C4F /* CharacterDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -102,6 +110,7 @@
 				03F44A7E28E0CA96009DE9C1 /* SearchResultView.swift */,
 				03F44A9328E0D873009DE9C1 /* SearchView.swift */,
 				03F44A9528E0DC4A009DE9C1 /* CharacterCardView.swift */,
+				035D6D9F28E20E4400277C4F /* CharacterDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,12 +186,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F44A7F28E0CA96009DE9C1 /* SearchResultView.swift in Sources */,
-				03F44A8E28E0CCD3009DE9C1 /* ViewModel.swift in Sources */,
-				03F44A9228E0CF8B009DE9C1 /* Character.swift in Sources */,
+				03F44A8E28E0CCD3009DE9C1 /* SearchResultViewModel.swift in Sources */,
+				03F44A9228E0CF8B009DE9C1 /* JSONModels.swift in Sources */,
+				035D6DA028E20E4400277C4F /* CharacterDetailsView.swift in Sources */,
 				03F44A7D28E0CA96009DE9C1 /* WotlkArmoryApp.swift in Sources */,
+				035D6DA628E44D4B00277C4F /* CharacterDetailsViewModel.swift in Sources */,
 				03F44A9428E0D873009DE9C1 /* SearchView.swift in Sources */,
 				03F44A9628E0DC4A009DE9C1 /* CharacterCardView.swift in Sources */,
-				03F44A9028E0CD91009DE9C1 /* Model.swift in Sources */,
+				035D6DA828E44DFF00277C4F /* CharacterDetailsModel.swift in Sources */,
+				03F44A9028E0CD91009DE9C1 /* SearchResultModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
