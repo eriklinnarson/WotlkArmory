@@ -27,8 +27,7 @@ struct CharacterCardView: View {
         GeometryReader { geometry in
             ZStack {
                 RoundedRectangle(cornerRadius: Constants.cornerRadius)
-                    .fill(.white)
-                    .foregroundColor(.white)
+                    .fill(Color(UIColor.systemBackground))
                 RoundedRectangle(cornerRadius: Constants.cornerRadius)
                     .strokeBorder(lineWidth: Constants.lineWidth)
                 
