@@ -26,11 +26,6 @@ struct CharacterCardView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                RoundedRectangle(cornerRadius: Constants.cornerRadius)
-                    .fill(Color(UIColor.systemBackground))
-                RoundedRectangle(cornerRadius: Constants.cornerRadius)
-                    .strokeBorder(lineWidth: Constants.lineWidth)
-                
                 HStack {
                     Image(character.clas) // The name of the images in assets correspond to the names found in the API-response
                         .resizable()

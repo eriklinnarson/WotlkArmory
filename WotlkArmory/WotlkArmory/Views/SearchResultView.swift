@@ -43,7 +43,6 @@ struct SearchResultView: View {
                             .opacity(0)
                             .padding(0)
                         }
-                        .listRowSeparator(.hidden)
                         .frame(height: geometry.size.height * Constants.characterCardHeightScale)
                         .listRowInsets(.init())
                         .padding(Constants.characterCardPadding)
