@@ -53,7 +53,7 @@ class CharacterDetailsViewModel: ObservableObject {
         if(highlightedItem == item) {
             highlightedItem = nil
         }
-        else {
+        else if(item.id != 0) {
             highlightedItem = item
         }
     }
