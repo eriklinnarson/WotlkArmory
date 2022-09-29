@@ -19,7 +19,10 @@ struct SearchResultView: View {
     }
     
     var body: some View {
-        if(viewModel.isFetching) {
+        if(viewModel.error) {
+            Text("No search results for \"\(searchString)\"")
+        }
+        else if(viewModel.isFetching) {
             VStack {
                 Spacer()
                 ProgressView()

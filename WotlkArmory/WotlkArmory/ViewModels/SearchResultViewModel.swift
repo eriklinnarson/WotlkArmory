@@ -13,6 +13,7 @@ class SearchResultViewModel: ObservableObject {
     var characters: [CharacterShortInfo] { model.characters }
     
     @Published var isFetching: Bool = false
+    @Published var error: Bool = false
     
     init() {
         self.model = SearchResultModel()
@@ -48,6 +49,10 @@ class SearchResultViewModel: ObservableObject {
             }
             catch {
                 print(error)
+                DispatchQueue.main.async {
+                    self?.isFetching = false
+                    self?.error = true
+                }
             }
         }
         
