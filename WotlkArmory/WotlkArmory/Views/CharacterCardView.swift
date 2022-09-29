@@ -30,7 +30,10 @@ struct CharacterCardView: View {
                     Image(character.clas) // The name of the images in assets correspond to the names found in the API-response
                         .resizable()
                         .scaledToFit()
-                        .frame(height: geometry.size.height * Constants.factionIconScale)
+                        .frame(
+                            width: geometry.size.height * Constants.factionIconScale,
+                            height: geometry.size.height * Constants.factionIconScale
+                        )
                         .opacity(Constants.factionIconOpacity)
                     Spacer()
                     VStack(alignment: .center) {
@@ -44,7 +47,10 @@ struct CharacterCardView: View {
                     Image(character.faction) // The name of the images in assets correspond to the names found in the API-response
                         .resizable()
                         .scaledToFit()
-                        .frame(height: geometry.size.height * Constants.factionIconScale)
+                        .frame(
+                            width: geometry.size.height * Constants.factionIconScale,
+                            height: geometry.size.height * Constants.factionIconScale
+                        )
                         .opacity(Constants.factionIconOpacity)
                 }
                 .padding(Constants.padding)
