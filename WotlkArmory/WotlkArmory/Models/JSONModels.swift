@@ -53,21 +53,21 @@ struct ItemSlots: Hashable, Codable {
         case Wrist = "Wrist"
     }
     
-    let Cloak: [Item]
-    let Shoulder: [Item]
-    let Feet: [Item]
-    let Trinket: [Item]
-    let MainHand: [Item]
-    let Neck: [Item]
-    let Ring: [Item]
-    let Ranged: [Item]
-    let Waist: [Item]
-    let Chest: [Item]
-    let Hands: [Item]
-    let Head: [Item]
-    let Legs: [Item]
-    let Wrist: [Item]
-    let OffHand: [Item]
+    let Cloak: [Item]?
+    let Shoulder: [Item]?
+    let Feet: [Item]?
+    let Trinket: [Item]?
+    let MainHand: [Item]?
+    let Neck: [Item]?
+    let Ring: [Item]?
+    let Ranged: [Item]?
+    let Waist: [Item]?
+    let Chest: [Item]?
+    let Hands: [Item]?
+    let Head: [Item]?
+    let Legs: [Item]?
+    let Wrist: [Item]?
+    let OffHand: [Item]?
 }
 
 struct Item: Hashable, Codable {

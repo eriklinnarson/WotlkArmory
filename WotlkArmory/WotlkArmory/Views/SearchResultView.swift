@@ -33,7 +33,7 @@ struct SearchResultView: View {
                     ForEach(viewModel.characters, id: \.self) { character in
                         ZStack {
                             CharacterCardView(character: character)
-                            NavigationLink(destination: CharacterDetailsView(characterName: character.name, characterServer: character.server)) {
+                            NavigationLink(destination: CharacterDetailsView(characterShortInfo: character)) {
                                 EmptyView()
                             }
                             .frame(width: 0)

@@ -10,12 +10,10 @@ import SwiftUI
 struct CharacterDetailsView: View {
     
     @StateObject var viewModel = CharacterDetailsViewModel()
-    private var characterName: String
-    private var characterServer: String
+    private var info: CharacterShortInfo
     
-    init(characterName: String, characterServer: String) {
-        self.characterName = characterName
-        self.characterServer = characterServer
+    init(characterShortInfo: CharacterShortInfo) {
+        self.info = characterShortInfo
     }
     
     struct Constants {
@@ -24,17 +22,20 @@ struct CharacterDetailsView: View {
     }
     
     func resizedItemIconView(item: Item, screenHeight: CGFloat) -> some View {
-        Link(destination: URL(string: "https://tbc.wowhead.com/item=\(item.id)")!) {
+        //Link(destination: URL(string: //"https://tbc.wowhead.com/item=\(item.id)")!) {
             ItemIconView(item: item)
                 .frame(
                     width: screenHeight * Constants.itemSizeToScreenHeight,
                     height: screenHeight * Constants.itemSizeToScreenHeight
                 )
-        }
+        //}
     }
     
     var body: some View {
-        if(viewModel.isFetching) {
+        if (viewModel.error == true) {
+            Text("Error loading character.")
+        }
+        else if(viewModel.isFetching) {
             VStack {
                 Spacer()
                 ProgressView()
@@ -60,7 +61,7 @@ struct CharacterDetailsView: View {
                             }
                             Spacer()
                             VStack {
-                                Image(viewModel.characterFaction) // The name of the images in assets correspond to the names found in the API-response
+                                Image(info.faction) // The name of the images in assets correspond to the names found in the API-response
                                     .resizable()
                                     .scaledToFit()
                                 .frame(height: geometry.size.height * Constants.factionIconScale)
@@ -88,7 +89,7 @@ struct CharacterDetailsView: View {
             }
             .padding()
             .onAppear {
-                viewModel.fetchCharacterDetailed(characterName: characterName, characterServer: characterServer)
+                viewModel.fetchCharacterDetailed(characterName: info.name, characterServer: info.server)
             }
         }
     }
@@ -96,6 +97,7 @@ struct CharacterDetailsView: View {
 
 struct CharacterDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterDetailsView(characterName: "Totemancer", characterServer: "Earthshaker")
+        let info = CharacterShortInfo(name: "Totemancer", server: "Earthshaker", faction: "Horde", clas: "Shaman", gearscore: 123)
+        CharacterDetailsView(characterShortInfo: info)
     }
 }
