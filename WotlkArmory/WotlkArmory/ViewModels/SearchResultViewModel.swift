@@ -8,16 +8,10 @@
 import SwiftUI
 
 class SearchResultViewModel: ObservableObject {
-    
-    @Published private var model: SearchResultModel
-    var characters: [CharacterShortInfo] { model.characters }
+    var characters: [CharacterShortInfo] = []
     
     @Published var isFetching: Bool = false
     @Published var error: Bool = false
-    
-    init() {
-        self.model = SearchResultModel()
-    }
     
     func fetchCharacters(searchString: String) {
         
@@ -43,7 +37,7 @@ class SearchResultViewModel: ObservableObject {
             do {
                 let characters = try JSONDecoder().decode([CharacterShortInfo].self, from: data)
                 DispatchQueue.main.async {
-                    self?.model.characters = characters
+                    self?.characters = characters
                     self?.isFetching = false
                 }
             }

@@ -9,8 +9,7 @@ import SwiftUI
 
 class CharacterDetailsViewModel: ObservableObject {
     
-    @Published private var model: CharacterDetailsModel
-    var characterData: CharacterData? { model.characterData }
+    var characterData: CharacterData?
     
     @Published var isFetching: Bool = false
     @Published var error: Bool = false
@@ -42,10 +41,6 @@ class CharacterDetailsViewModel: ObservableObject {
     var MainHand: Item { characterData?.g.all.MainHand?[0] ?? defaultItem }
     var OffHand: Item { characterData?.g.all.OffHand?[0] ?? defaultItem }
     var Ranged: Item { characterData?.g.all.Ranged?[0] ?? defaultItem }
-    
-    init() {
-        self.model = CharacterDetailsModel()
-    }
     
     /// Select an item to be highlighted.
     /// - Parameter item: the item to be highlighted.
@@ -83,7 +78,7 @@ class CharacterDetailsViewModel: ObservableObject {
             do {
                 let characterData = try JSONDecoder().decode(CharacterData.self, from: data)
                 DispatchQueue.main.async {
-                    self?.model.characterData = characterData
+                    self?.characterData = characterData
                     self?.isFetching = false
                 }
             }
