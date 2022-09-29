@@ -15,6 +15,8 @@ class CharacterDetailsViewModel: ObservableObject {
     @Published var isFetching: Bool = false
     @Published var error: Bool = false
     
+    @Published var highlightedItem: Item?
+    
     var characterName: String { characterData?.info.name ?? "Name not available" }
     var characterServer: String { characterData?.info.server ?? "Server not available" }
     var characterFaction: String { characterData?.info.faction ?? "Faction not available" }
@@ -43,6 +45,22 @@ class CharacterDetailsViewModel: ObservableObject {
     
     init() {
         self.model = CharacterDetailsModel()
+    }
+    
+    /// Select an item to be highlighted.
+    /// - Parameter item: the item to be highlighted.
+    func highlightItem(item: Item) {
+        if(highlightedItem == item) {
+            highlightedItem = nil
+        }
+        else {
+            highlightedItem = item
+        }
+    }
+    
+    /// Make the item currently selected not highlighted anymore.
+    func removeHighlighting() {
+        highlightedItem = nil
     }
     
     func fetchCharacterDetailed(characterName: String, characterServer: String) {

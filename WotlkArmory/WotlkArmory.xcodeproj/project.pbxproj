@@ -11,6 +11,7 @@
 		035D6DA628E44D4B00277C4F /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035D6DA528E44D4B00277C4F /* CharacterDetailsViewModel.swift */; };
 		035D6DA828E44DFF00277C4F /* CharacterDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035D6DA728E44DFF00277C4F /* CharacterDetailsModel.swift */; };
 		035D6DAA28E48C3F00277C4F /* ItemIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035D6DA928E48C3F00277C4F /* ItemIconView.swift */; };
+		0366F1AC28E64B23004F252B /* ViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366F1AB28E64B23004F252B /* ViewHelpers.swift */; };
 		03F44A7D28E0CA96009DE9C1 /* WotlkArmoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44A7C28E0CA96009DE9C1 /* WotlkArmoryApp.swift */; };
 		03F44A7F28E0CA96009DE9C1 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44A7E28E0CA96009DE9C1 /* SearchResultView.swift */; };
 		03F44A8128E0CA96009DE9C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F44A8028E0CA96009DE9C1 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		035D6DA528E44D4B00277C4F /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
 		035D6DA728E44DFF00277C4F /* CharacterDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsModel.swift; sourceTree = "<group>"; };
 		035D6DA928E48C3F00277C4F /* ItemIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemIconView.swift; sourceTree = "<group>"; };
+		0366F1AB28E64B23004F252B /* ViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelpers.swift; sourceTree = "<group>"; };
 		03F44A7928E0CA96009DE9C1 /* WotlkArmory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WotlkArmory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F44A7C28E0CA96009DE9C1 /* WotlkArmoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotlkArmoryApp.swift; sourceTree = "<group>"; };
 		03F44A7E28E0CA96009DE9C1 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				03F44A9528E0DC4A009DE9C1 /* CharacterCardView.swift */,
 				035D6D9F28E20E4400277C4F /* CharacterDetailsView.swift */,
 				035D6DA928E48C3F00277C4F /* ItemIconView.swift */,
+				0366F1AB28E64B23004F252B /* ViewHelpers.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				03F44A8E28E0CCD3009DE9C1 /* SearchResultViewModel.swift in Sources */,
 				035D6DAA28E48C3F00277C4F /* ItemIconView.swift in Sources */,
 				03F44A9228E0CF8B009DE9C1 /* JSONModels.swift in Sources */,
+				0366F1AC28E64B23004F252B /* ViewHelpers.swift in Sources */,
 				035D6DA028E20E4400277C4F /* CharacterDetailsView.swift in Sources */,
 				03F44A7D28E0CA96009DE9C1 /* WotlkArmoryApp.swift in Sources */,
 				035D6DA628E44D4B00277C4F /* CharacterDetailsViewModel.swift in Sources */,

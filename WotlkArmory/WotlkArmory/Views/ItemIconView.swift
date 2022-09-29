@@ -15,19 +15,9 @@ struct ItemIconView: View {
         self.item = item
     }
     
-    func itemRarityColor(rarity: String) -> Color {
-        switch rarity {
-        case "uncommon": return Color.green
-        case "rare": return Color.blue
-        case "epic": return Color.purple
-        case "legendary": return Color.orange
-        default: return Color.gray
-        }
-    }
-    
     struct Constants {
-        static let cornerRadius: CGFloat = 5
-        static let lineWidth: CGFloat = 5
+        static let cornerRadius: CGFloat = GlobalConstants.cornerRadius
+        static let lineWidth: CGFloat = GlobalConstants.lineWidth
         static let defaultBackgroundColor: Color = Color.gray
     }
     
