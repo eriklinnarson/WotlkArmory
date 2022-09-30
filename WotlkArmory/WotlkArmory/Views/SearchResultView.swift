@@ -15,7 +15,7 @@ struct SearchResultView: View {
     struct Constants {
         static let characterCardHeightScale: CGFloat = 0.11
         static let characterCardPadding: CGFloat = 5
-        static let progressViewScaleEffect: CGFloat = 1.5
+        static let progressViewScaleEffect: CGFloat = GlobalConstants.progressViewScaleEffect
     }
     
     var body: some View {

@@ -14,6 +14,8 @@ import SwiftUI
 struct GlobalConstants {
     static let cornerRadius: CGFloat = 5
     static let lineWidth: CGFloat = 5
+    
+    static let progressViewScaleEffect: CGFloat = 1.5
 }
 
 func itemRarityColor(rarity: String) -> Color {

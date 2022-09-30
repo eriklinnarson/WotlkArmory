@@ -25,6 +25,7 @@ struct CharacterDetailsView: View {
         
         static let lineWidth = GlobalConstants.lineWidth
         static let cornerRadius = GlobalConstants.cornerRadius
+        static let progressViewScaleEffect = GlobalConstants.progressViewScaleEffect
     }
     
     var highlightingAnimation: Animation {
@@ -78,6 +79,7 @@ struct CharacterDetailsView: View {
             VStack {
                 Spacer()
                 ProgressView()
+                    .scaleEffect(Constants.progressViewScaleEffect)
                 Spacer()
             }
         }

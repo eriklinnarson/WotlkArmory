@@ -41,7 +41,7 @@ struct CharacterCardView: View {
                             .font(.largeTitle)
                             .minimumScaleFactor(0.5)
                             .lineLimit(1)
-                        Text("Itemlevel \(String(character.gearscore))")
+                        Text("Item Level \(String(Int(character.gearscore)))")
                     }
                     Spacer()
                     Image(character.faction) // The name of the images in assets correspond to the names found in the API-response
