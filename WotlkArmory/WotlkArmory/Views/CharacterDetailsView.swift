@@ -19,7 +19,7 @@ struct CharacterDetailsView: View {
     struct Constants {
         static let itemSizeToScreenHeight: CGFloat = 0.105
         static let factionIconScale: CGFloat = 0.2
-        static let itemNotHighlightedCapacity: Double = 0.3
+        static let itemNotHighlightedCapacity: Double = 0.25
         static let highlightItemAnimationDuration: Double = 0.2
         static let itemLevelTextColor: Color = Color.yellow
         
@@ -86,6 +86,11 @@ struct CharacterDetailsView: View {
         else {
             VStack {
                 Text(viewModel.characterName + "-" + viewModel.characterServer)
+                    .font(.title)
+                HStack {
+                    Text("\(info.clas), Item Level \(Int(info.gearscore))")
+                }
+                
                 GeometryReader { geometry in
                     let screenHeight = geometry.size.height
                     VStack {
@@ -106,7 +111,7 @@ struct CharacterDetailsView: View {
                                     Image(info.faction) // The name of the images in assets correspond to the names found in the API-response
                                         .resizable()
                                         .scaledToFit()
-                                    .frame(height: geometry.size.height * Constants.factionIconScale)
+                                        .frame(height: geometry.size.height * Constants.factionIconScale)
                                 }
                                 .opacity(viewModel.highlightedItem == nil ? 1 : 0)
                                 
