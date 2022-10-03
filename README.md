@@ -1,5 +1,5 @@
 <p align="center">
-  <a><img align="right" src="https://user-images.githubusercontent.com/47529938/193354016-7ed0fbcd-88d1-4edf-a563-69bf429a993f.mp4" width="300"></a>
+  <a><img align="right" src="https://user-images.githubusercontent.com/47529938/193517672-be0d7758-991b-4337-8099-cec3565eec5e.mp4" width="300"></a>
 </p>
 
 # World of Warcraft Classic - Character Search App for iOS in SwiftUI
